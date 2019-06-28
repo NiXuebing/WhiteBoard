@@ -1,4 +1,4 @@
-package com.flnet.whiteboard;
+package com.flnet.whiteboard.socket;
 
 import com.corundumstudio.socketio.Configuration;
 import com.corundumstudio.socketio.SocketIOServer;
@@ -33,13 +33,6 @@ public class SocketConfig {
 
         // Ping消息超时时间（毫秒），默认60000，这个时间间隔内没有接收到心跳消息就会发送超时事件
         config.setPingTimeout(60000);
-
-//        // 握手协议参数使用JWT的Token认证方案
-//        config.setAuthorizationListener(data -> {
-//            //可以使用如下代码获取用户密码信息
-//            String token = data.getSingleUrlParam("token");
-//            return true;
-//        });
 
         return new SocketIOServer(config);
     }

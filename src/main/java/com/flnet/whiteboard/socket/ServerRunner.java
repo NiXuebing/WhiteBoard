@@ -1,4 +1,4 @@
-package com.flnet.whiteboard;
+package com.flnet.whiteboard.socket;
 
 import com.corundumstudio.socketio.SocketIOServer;
 import org.springframework.beans.factory.annotation.Autowired;
