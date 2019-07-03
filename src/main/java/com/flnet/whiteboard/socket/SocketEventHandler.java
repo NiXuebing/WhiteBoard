@@ -41,7 +41,8 @@ public class SocketEventHandler {
      */
     @OnEvent("chatevent")
     public void chatevent(SocketIOClient client) {
-        log.info("用户{}可以操作了");
+        String username = client.getHandshakeData().getSingleUrlParam("username");
+        log.info("用户{}可以操作了", username);
     }
 
 }
